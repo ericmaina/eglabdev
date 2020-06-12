@@ -19,17 +19,21 @@
 <div class="row">
 	<div class="col-md-4">
 	  <h2>Databases</h2>
-	  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	  <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+	  <p>This are a number of databases that are for the internal use of the lab that make it easier to 
+	       either locate various things including vectors, primers as well as reagents .....</p>
+	  <p><a class="btn btn-primary" href="<?php echo site_url('home/database'); ?>" role="button">View details &raquo;</a></p>
 	</div>
 	<div class="col-md-4">
 	  <h2>Resources</h2>
-	  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+		<p>A collection of the available tools that you have access to as a member of the lab.
+		 have a look at the computational resources that includes software and manuals</p>
+
 	  <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
    </div>
 	<div class="col-md-4">
-	  <h2>Papers</h2>
-	  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+	  <h2>Publications</h2>
+	<p>These is a compilation of lab generated publications from various lab members 
+	    who have been part of the lab over the years arranged in categories.</p>
 	  <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
 	</div>
 </div>

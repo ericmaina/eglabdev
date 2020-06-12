@@ -16,6 +16,13 @@ class Home extends CI_Controller
         
     }
     
-    
+    function database()
+    {
+        	    
+	        
+	    $this->template->set('title', 'Database information');
+        $this->template->load('_layout/default', 'database_infor');
+        
+    }
     
 }

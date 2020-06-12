@@ -15,8 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="<?php echo site_url('home'); ?>"">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Resources</a></li>
-        <li class="dropdown">
+         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Databases <span class="caret"></span></a>
           <ul class="dropdown-menu">
 			 <li><a href="<?php echo site_url('databases/antibodies'); ?>">Antibody</a></li>
@@ -36,10 +35,10 @@
           </ul>
         </li>
       </ul>
-      
+    
       <ul class="nav navbar-nav ">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Papers <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Publications <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('publications/publications/research'); ?>">Research</a></li>
             <li><a href="<?php echo site_url('publications/publications/reviews'); ?>">Reviews</a></li>
@@ -52,6 +51,20 @@
         <li><a href="<?php echo site_url('members/members'); ?>">Team</a></li>
         <li><a href="<?php echo site_url('databases/mutants/autocomplete'); ?>">Search</a></li>
       </ul>
+      
+<ul class="nav navbar-nav ">
+	<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+		<ul class="dropdown-menu">
+			<li><a href="#">Data Available</a></li>
+			<li><a href="#">General infor</a></li>
+			<li><a href="#">Documents</a></li>
+			
+		</ul>
+	</li>
+</ul>
+      
+      
       
      <ul class="nav navbar-nav navbar-right">
      <li><a href="<?php echo site_url('login'); ?>"><i class="fa fa-fw fa-user"></i>Login</a></li>
