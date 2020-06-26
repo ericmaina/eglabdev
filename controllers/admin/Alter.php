@@ -179,20 +179,13 @@ class Alter extends MY_Controller {
    public function user()  //has errors when updating 
 	{
 		$crud = new grocery_CRUD();
-		$crud->set_table('users');
+		$crud->set_table('lab_users');
 		$crud->set_subject('Users');
-		$crud->required_fields('user_name','password','user_email','user_level');
-		$crud->columns('user_name','user_email','password','user_level');
-		$crud->field_type('password', 'password');
-		$crud->unset_read()->unset_export()->unset_print()->unset_clone()->unset_edit();
-		//$crud->callback_edit_field('password',array($this,'decrypt_password_callback'));
-        //$crud->callback_add_field('password',array($this,'decrypt_password_callback'));
-		$crud->callback_before_insert(array($this,'use_md5_password'));
-		$crud->callback_before_update(array($this,'use_md5_password'));
-		
-		$crud->field_type('user_level','dropdown',
+		$crud->columns('firstname','lastname','email','level');
+		$crud->edit_fields('firstname','lastname','email','level');
+		$crud->unset_read()->unset_export()->unset_print()->unset_clone()->unset_add();
+		$crud->field_type('level','dropdown',
             array('editor' => 'editor', 'admin' => 'admin','user' => 'user'));
-		
 		$output = $crud->render();
 		$this->_table_output($output);
 	}	

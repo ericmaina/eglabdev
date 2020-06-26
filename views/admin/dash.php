@@ -1,5 +1,5 @@
 
-       <div class="panel panel-default">
+    <div class="panel panel-default">
                 <div class="panel-heading">
                     <b>	Hello <?php echo $this->session->userdata('username');?> You are Logged in! </b> 
                 </div>
@@ -10,7 +10,12 @@
                     To create a new user select the signup button on the menu bar and enter user details.
                     The user name and password are mandatory 
                     
+                    
+                    
+                    
                 </div>
             </div>
   
    <h2 class="sub-header">Section title</h2>
+	
+	<a href="<?php echo site_url('users/changePassword') ?>">Change password</a>
