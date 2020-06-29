@@ -31,6 +31,12 @@ class User_model extends CI_Model{
         $this->db->update('lab_users', $userdata);
     }
     
+    public function delete_user($id)
+    {
+        $this->db->where('user_id', $id);
+        return $this->db->delete('lab_users');
+    }    
+    
     public function register($userdata){
 
 			return $this->db->insert('lab_users', $userdata);

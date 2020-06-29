@@ -59,7 +59,7 @@ class Users extends CI_Controller{
 					'lastname' => $this->input->post('lastname'),
 					'email' => $this->input->post('email'),
 					'password' => $encrypt_password,
-					'level' =>'user'
+					'level' =>$this->input->post('level'),
 				);
 
 				if ($this->user_model->register($userdata)){ 
@@ -115,13 +115,7 @@ class Users extends CI_Controller{
     }
     
     
-    function edit($user_id)
-	{
-		$this->logged_in();
-		$user = $this->user_model->get_user_by_id($user_id);
-		$this->template->set('title', 'Edit user');
-        $this->template->load('admin/dash_template','users/edit_users', ['user' => $user]); 
-	}
+   
 	
 	function editpass($user_id)
 	{
@@ -152,7 +146,15 @@ class Users extends CI_Controller{
         }
 	}	
     
-    
+     function edit($user_id)
+	{
+		$this->logged_in();
+		$user = $this->user_model->get_user_by_id($user_id);
+		$this->template->set('title', 'Edit user');
+        $this->template->load('admin/dash_template','users/edit_users', ['user' => $user]); 
+	}
+	
+	
     function saveupdate()
 	{
 		$this->form_validation->set_rules('firstname', 'First Name', 'required');
@@ -162,7 +164,7 @@ class Users extends CI_Controller{
 		$data = array(
 				'firstname' => $this->input->post('firstname'),
 				'lastname' => $this->input->post('lastname'),
-				'level' =>$this->input->post('user'),
+				'level' =>$this->input->post('level'),
 			);
 				
 		if ($this->form_validation->run() == FALSE){
@@ -211,11 +213,20 @@ class Users extends CI_Controller{
         return true;
     }
     
-    
+    public function delete($id)
+    {
+	$this->logged_in();
+	$user=$this->user_model->get_user_by_id($id);
+	$this->user_model->delete_user($id);
+	$this->session->set_flashdata('message', "User {$user->firstname} has been deleted");
+	redirect(base_url('users'));
+		
+	}
+		
     public function logout(){
       $this->session->sess_destroy();
       redirect('home');
-  }
+	}
   
   
 	public function check_username_exists($username){
