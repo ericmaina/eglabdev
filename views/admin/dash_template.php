@@ -24,23 +24,14 @@
   </head>
 
   <body class="nav-md">
-    <div class="container body">
+	 <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>EGLAB DASHBOARD</span></a>
+              <a href="<?php echo site_url('home'); ?>" class="site_title"><i class="fa fa-paw"></i> <span>EGLAB DASHBOARD</span></a>
             </div>
             <div class="clearfix"></div>
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_info">
-                Welcome <?php echo $this->session->userdata('username');?>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-            <!-- /menu profile quick info -->
-
             <br />
 
             <!-- sidebar menu -->
@@ -50,8 +41,8 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo site_url('admin/alter/dashboard'); ?>">Main</a></li>
-                      <li><a href="#">coming soon</a></li>
+                      <li><a href="<?php echo site_url('admin/alter/dashboard'); ?>">Admin Home</a></li>
+                      <li><a href="<?php echo site_url('home'); ?>">Main Home</a></li>
                      </ul>
                   </li>
                   
@@ -70,18 +61,12 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Users <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+					  <li><a href="<?php echo site_url('users/register'); ?>">Register user</a></li>
 					  <li><a href="<?php echo site_url('users'); ?>">Edit users</a></li>
-                      <li><a href="<?php echo site_url('users/register'); ?>">Register user</a></li>
-                      <li><a href="<?php echo site_url('admin/alter/user'); ?>">register2</a></li>
+                      
                     </ul>
                   </li>
                   
-                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Chart JS</a></li>
-                      <li><a href="chartjs2.html">Chart JS2</a></li>
-                    </ul>
-                  </li>
                   </ul>
               </div>
             </div>
@@ -96,14 +81,24 @@
                   <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                 </div>
                 
-                <nav class="nav navbar-nav ">
-					 <nav class="nav navbar-nav">
-						<ul class=" navbar-right">
-							<li class="nav-item"><a href="<?php echo site_url('login/logout');?>">Sign Out</a></li>
-						</ul>
-					
-		
-              </nav>
+                              
+              <nav class="nav navbar-nav ">
+					<ul class=" navbar-right">
+						<?php if(!$this->session->userdata('logged_in')): ?>
+						<li><a href="<?php echo site_url('users/login'); ?>">Login</a></li>
+						<?php endif; ?>
+					</ul>
+					  
+					<ul class=" navbar-right">
+						<?php if($this->session->userdata('logged_in')): ?>
+							<li><a href="<?php echo site_url('users/logout');?>">Logout</a></li>
+						<?php endif; ?>
+					</ul>        
+			</nav>
+              
+              
+              
+              
             </div>
           </div>
          
@@ -114,7 +109,7 @@
 						<div class="page-title">
 							<div class="title_left">
 								<h3>
-									Plain Page <small>Page subtile </small>
+									Welcome!! <small>This is the administration page </small>
 								</h3>
 							</div>
 						</div>

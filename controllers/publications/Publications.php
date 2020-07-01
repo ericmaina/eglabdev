@@ -9,6 +9,14 @@ class Publications extends CI_Controller
         
     }
 
+	
+
+    function index()
+    {
+	    $this->template->set('title', 'Publications information');
+        $this->template->load('_layout/default', 'publications/index');
+        
+    }
     public function research()
     {
 	    $this->template->set('title', 'Research');

@@ -10,7 +10,7 @@ class Alter extends MY_Controller {
         
     }
     
-    function dashboard()
+    function index()
     {
 		
         //$this->template->load('admin/template', 'admin/dash');

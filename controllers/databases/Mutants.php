@@ -83,31 +83,7 @@ public function getLists()
       
    }
    
-   public function autocomplete(){
-     $this->load->view('databases/searchform');
-    }
- 
-    public function search(){
- 
-        $term = $this->input->get('term');
- 
-        $this->db->like('locus', $term);
- 
-        $data = $this->db->get("mutants")->result();
- 
-        echo json_encode( $data);
-    }
     
-    function search_keyword()
-    {
-        $keyword=$this->input->post('keyword');
-        $this->db->like('locus',$keyword);
-        $data['results'] = $this->db->get("mutants")->result();
-        
-         
-		$this->load->view('databases/searchform',$data);
-    }
-   
 
 }
 

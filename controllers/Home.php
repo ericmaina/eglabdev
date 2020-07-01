@@ -6,6 +6,14 @@ if (!defined('BASEPATH'))
 class Home extends CI_Controller
 {
     
+     public function __construct()
+    {
+        parent::__construct();
+        
+        $this->output->enable_profiler(TRUE);
+    }
+    
+    
       
     function index()
     {
@@ -16,13 +24,5 @@ class Home extends CI_Controller
         
     }
     
-    function database()
-    {
-        	    
-	        
-	    $this->template->set('title', 'Database information');
-        $this->template->load('_layout/default', 'database_infor');
-        
-    }
-    
+       
 }
