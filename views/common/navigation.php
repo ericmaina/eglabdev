@@ -63,7 +63,7 @@
 
 
 <ul class="nav navbar-nav">
- <?php if($this->session->userdata('logged_in')): ?>	
+ <?php if($this->session->userdata('logged_in') and $this->session->userdata('userlevel')==='admin'): ?>	
  <li><a href="<?php echo site_url('admin/alter/'); ?>">Admin</a></li>
  <?php endif; ?>
 </ul>

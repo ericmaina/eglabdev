@@ -27,7 +27,7 @@ class Users extends CI_Controller{
         }
     }
     
-   
+       
 	public function register()
 	{
 			
@@ -105,6 +105,7 @@ class Users extends CI_Controller{
                 
 					
                 $this->session->set_userdata($userdata);
+                $this->session->set_flashdata('message', 'You are now logged in.');
                 redirect('home');
                 //redirect("$currentClass/$currentAction");
             }

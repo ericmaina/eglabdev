@@ -7,6 +7,17 @@
 </div>
 <br>
 
+<div class="row">
+	<div class="col-sm-12">
+<?php if($this->session->flashdata('message')) { ?>
+    <div class="alert alert alert-success">
+      <?php echo $this->session->flashdata('message')?>
+    </div>
+ <?php } ?>
+</div>
+</div>
+
+
 
 <h1>Grotewold lab Resource center</h1>
 <p>This is a lab internal&nbsp;site to house all the resouces and information of the lab in a centralised location.&nbsp;</p>

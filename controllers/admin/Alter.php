@@ -6,8 +6,11 @@ class Alter extends MY_Controller {
     {
         parent::__construct();
   
+		if(!($this->session->userdata('userlevel')=='admin')){
+			$this->session->set_flashdata('message', 'Sorry! you need to be an administrator to access this page');
+			redirect('home');
+		}
         $this->load->library('grocery_CRUD');
-        
     }
     
     function index()
