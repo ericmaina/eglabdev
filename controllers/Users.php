@@ -19,20 +19,11 @@ class Users extends CI_Controller{
         $this->template->load('admin/dash_template', 'users/list',$data);
 	
 		}
-    
-    private function logged_in()
-    {
-        if( ! $this->session->has_userdata('logged_in')){
-            redirect('users/login');
-        }
-    }
-    
-       
+         
 	public function register()
 	{
 			
 		$this->logged_in();
-
 		$this->form_validation->set_rules('firstname', 'First Name', 'required');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_check_email_exists');
@@ -233,8 +224,6 @@ class Users extends CI_Controller{
 		}
 	}
 
-
-
 	public function check_email_exists($email)
 	{
 		$this->form_validation->set_message('check_email_exists', 'This email is already registered.');
@@ -251,6 +240,14 @@ class Users extends CI_Controller{
       $this->session->sess_destroy();
       redirect('home');
 	}
+	
+	private function logged_in()
+    {
+        if( ! $this->session->has_userdata('logged_in')){
+            redirect('users/login');
+        }
+    }
+    
     
 }
 

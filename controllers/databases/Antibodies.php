@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH'))exit('No direct script access allowed');
 
-class Antibodies extends CI_Controller
+class Antibodies extends MY_Controller
 {
     function __construct()
     {

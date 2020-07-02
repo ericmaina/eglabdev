@@ -1,4 +1,3 @@
-<div class="container">
   <h3>PROCEDINGS
   </h3>
   <hr>
@@ -105,4 +104,4 @@
     <em>Maize Genet. Coop. Newsl.
     </em> 64: 37.
   </p>
-</div>
+

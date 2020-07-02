@@ -1,4 +1,4 @@
-<div class="container">
+
   <h3>BOOKS
   </h3>
   <hr>
@@ -73,4 +73,4 @@
     </em>. Grotewold, E. (ed) Humana Press , NJ. &nbsp;pp.
     415-426.
   </p>
-</div>
+

@@ -1,4 +1,5 @@
 <h3>Mutant Records</h3>
+<br>
 <div class="table-responsive">
 <table class="table table-bordered table-striped table-condensed" id="mutant-list">
 	<thead>

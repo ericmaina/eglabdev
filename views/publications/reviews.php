@@ -1,4 +1,3 @@
-<div class="container">
   <h3>REVIEWS
   </h3>
   <hr>
@@ -84,4 +83,4 @@
     <em>Trends Plant Sci.
     </em> &nbsp;3:&nbsp;212-217.
   </p>
-</div>
+

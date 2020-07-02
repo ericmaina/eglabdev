@@ -17,8 +17,9 @@ class Photo extends CI_Controller{
     $this->template->load('_layout/default','gallery/picture_list',$data);
     }
 	
-	public function form()
+	public function upload()
 	{
+		$this->logged_in();
 		$this->template->set('title', 'Upload Photo');
 		$this->template->load('_layout/default','gallery/upload_form');
 	}
@@ -66,6 +67,14 @@ class Photo extends CI_Controller{
 			
 		}
 	}
+	
+	 private function logged_in()
+    {
+        if( ! $this->session->has_userdata('logged_in')){
+            redirect('users/login');
+        }
+    }
+    
 }
 
 /* End of file Photo.php */

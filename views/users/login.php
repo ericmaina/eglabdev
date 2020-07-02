@@ -1,11 +1,15 @@
-<div class="row justify-content-center">
-	
+<div class="row">
+<div class="col-sm-8">
 		<h1><?php echo $title ?></h1>
 		<?php if($this->session->flashdata('message')) { ?>
 			<div class="alert alert-danger">
 				<?php echo $this->session->flashdata('message')?>
 			</div>
 		<?php } ?>
+	</div>
+</div>
+<div class="row justify-content-center">
+	
 		<?php echo form_open('users/login', array('id' => 'loginForm','class'=>'form-horizontal')) ?>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="email">Email:</label>
@@ -24,6 +28,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-6">
 				<input type="submit" name="submit" value="Login" class="btn btn-primary"/>
+				<a href="<?=site_url('home');?>" class="btn btn-warning">Back</a>
 				</div>
 			</div>
 		<?php echo form_close(); ?>

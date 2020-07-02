@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH'))exit('No direct script access allowed');
 
-class Rnapreps extends CI_Controller
+class Rnapreps extends MY_Controller
 {
     function __construct()
     {

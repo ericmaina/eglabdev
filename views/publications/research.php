@@ -1,4 +1,4 @@
-<div class="container"> 	
+
   <h3>RESEARCH PAPERS
   </h3>
   <hr>
@@ -977,4 +977,4 @@
     <strong>11:
     </strong> 122-127.
   </p>
-</div>	   
+   

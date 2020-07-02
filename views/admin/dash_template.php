@@ -109,7 +109,7 @@
 						<div class="page-title">
 							<div class="title_left">
 								<h3>
-									Welcome!! <small>This is the administration page </small>
+									<small>You are in the administration page </small>
 								</h3>
 							</div>
 						</div>
@@ -144,7 +144,12 @@
 
         <footer>
           <div class="pull-right">
-            footer
+            <div class="container-fluid bg-light text-center custom-footer">
+				<div class="col-md-12 col-sm-12">
+				© 2019 Copyright:
+					<a href="https://bmb.natsci.msu.edu/faculty/erich-grotewold/"> GrotewoldLab</a>
+			</div>
+			</div>
           </div>
           <div class="clearfix"></div>
         </footer>

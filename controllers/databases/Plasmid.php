@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH'))exit('No direct script access allowed');
 
-class Plasmid extends CI_Controller
+class Plasmid extends MY_Controller
 {
     function __construct()
     {

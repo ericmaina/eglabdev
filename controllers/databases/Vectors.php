@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH'))exit('No direct script access allowed');
 
-class Vectors extends CI_Controller
+class Vectors extends MY_Controller
 {
     function __construct()
     {

@@ -13,9 +13,9 @@
 			<?php endforeach ?>
 
           </ul>  
-          
-          	  <a href="<?=base_url().'gallery/photo/form';?>" class="btn btn-primary">Upload More</a>
-           
+			  <?php if($this->session->userdata('logged_in')): ?>
+          	  <a href="<?=base_url().'gallery/photo/upload';?>" class="btn btn-primary">Upload More</a>
+			  <?php endif; ?>
     </div> <!-- /container -->
     
      

@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH'))exit('No direct script access allowed');
 
-class Polyclone extends CI_Controller
+class Polyclone extends MY_Controller
 {
     function __construct()
     {

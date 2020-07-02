@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH'))exit('No direct script access allowed');
 
-class Mutants extends CI_Controller
+class Mutants extends MY_Controller
 {
     function __construct()
     {

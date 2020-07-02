@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH'))exit('No direct script access allowed');
 
-class Tfome extends CI_Controller
+class Tfome extends MY_Controller
 {
     function __construct()
     {

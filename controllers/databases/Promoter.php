@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH'))exit('No direct script access allowed');
 
-class Promoter extends CI_Controller
+class Promoter extends MY_Controller
 {
     function __construct()
     {

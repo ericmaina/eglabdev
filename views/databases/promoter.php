@@ -1,4 +1,5 @@
 <h3>Promoter Records</h3>
+<br>
 <div class="table-responsive">
 <table class="table table-bordered table-striped table-condensed" id="promoter-list">
 	<thead>

@@ -1,4 +1,3 @@
-<div class="container">
   <h3>EDITORIALS
   </h3>
   <hr>
@@ -137,4 +136,4 @@
     <strong>Transcription factors and metabolic engineering:
     </strong> Novel applications for ancient tools.&nbsp;Braun, E.L., Matulni
   </p>
-</div>
+

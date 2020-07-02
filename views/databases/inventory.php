@@ -1,4 +1,5 @@
 <h3>Inventory Records</h3>
+<br>
 <div class="table-responsive">
 <table class="table table-bordered table-striped table-condensed " id="inventory-list">
 	<thead>
