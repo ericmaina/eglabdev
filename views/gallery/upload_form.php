@@ -9,7 +9,7 @@
 
 <h3>Upload picture </h3>
 
-<?php echo form_open_multipart('gallery/photo/file_data');?>
+<?php echo form_open_multipart('gallery/photo/upload_photo');?>
 
 <div class="col-sm-8">
     <div class="form-group">

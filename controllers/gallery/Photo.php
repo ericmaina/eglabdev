@@ -24,12 +24,13 @@ class Photo extends CI_Controller{
 		$this->template->load('_layout/default','gallery/upload_form');
 	}
 	
-	public function file_data(){
+	public function upload_photo(){
 		//validate the form data 
 
 		$this->form_validation->set_rules('title', 'Picture Title', 'required');
 
         if ($this->form_validation->run() == FALSE){
+			$this->template->set('title', 'Upload Photo');
 			$this->template->load('_layout/default','gallery/upload_form');
 
 			
@@ -49,6 +50,7 @@ class Photo extends CI_Controller{
 
 			if ( ! $this->upload->do_upload('pic_file')){
 				$error = array('error' => $this->upload->display_errors());
+				$this->template->set('title', 'Upload Photo');
 				$this->template->load('_layout/default','gallery/upload_form',$error);
 			}else{
 
