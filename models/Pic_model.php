@@ -2,6 +2,16 @@
 
 class Pic_model extends CI_Model{
 	
+	function __construct() {
+		 
+		 // Load database
+        $this->db = $this->load->database('db5', true);
+       
+		 
+    }
+	
+	
+	
 	function get_all_pics(){
 		$all_pics = $this->db->get('labphotos');
 		return $all_pics->result();
