@@ -2,7 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users_model extends CI_Model{
-    
+	
+	
+    function __construct() {
+		 
+		 // Load database
+        $this->db = $this->load->database('db5', true);
+       
+		 
+    }
     
     public function login($email, $password)
     {
