@@ -9,15 +9,14 @@
 			<th>Project ID</th>
 			<th>Antigen</th>
 			<th>Sample Type</th>
-			<th>Vol</th>
 			<th>Date</th>
 			<th>Lot</th>
+			<th>locus</th>
 			<th>Species</th>
-			<th>Storage</th>
+			<th>location</th>
 			<th>Box</th>
 			<th>Company</th>
-			<th>Prepared</th>
-			<th>Read</th>
+			
 			
 			
 			

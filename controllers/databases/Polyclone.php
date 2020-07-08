@@ -9,9 +9,10 @@ class Polyclone extends MY_Controller
         
           
           $this->load->model('Polyclone_model');
-          $this->column_search = array('projectid','antigen.name','category','date','lot','speciesname','storage','box','firstname'); 
-		  $this->column_order = array('cloneid','projectid','antigen.name','category',null,'date','lot','speciesname','storage','box',null,'firstname',null); 
-          $this->order = array('cloneid' => 'desc');
+          $this->table = 'clones';
+          $this->column_search = array('projectid','antigen','sampletype','locus','species','location','box'); 
+		  $this->column_order = array('clones_id','projectid','antigen','sampletype','date','lot','locus','species','location','box',null); 
+         
 
     }
 
@@ -29,23 +30,16 @@ class Polyclone extends MY_Controller
         $row = $this->Polyclone_model->get_by_id($id);
         if ($row) {
             $data = array(
+             'Antigen'=> $row->antigen, 
 			 'projectid' => $row->projectid, 
-			 'category' => $row->category,
-			 'volume'  => $row->volume, 
+			 'sampletype' => $row->sampletype,
 			 'date'  => $row->date, 
 			 'lot' => $row->lot, 
-			 'name'  => $row->name, 
-			 'GP'    => $row->GP, 
-			 'sequence' => $row->sequence, 
-			 'comments' => $row->comments, 
-			 'synonym' => $row->synonym, 
-			 'speciesname'=> $row->speciesname,
-			 'animalnum' => $row->animalnum, 
+			 'locus' => $row->locus, 
+			 'species'=> $row->species,
+			 'location' => $row->location, 
 			 'box' => $row->box, 
-			 'storage' => $row->storage, 
-			 'purpose' => $row->purpose, 
-			 'companyname' => $row->companyname,
-			 'companyphone' => $row->phone 
+			 'companyname' => $row->company_name,
      
 	    );
           
@@ -69,17 +63,16 @@ function getLists(){
          foreach($items as $record) {
            $data[] = array(
 				$record->projectid,
-				$record->name,
-				$record->category,
-				$record->volume,
+				$record->antigen,
+				$record->sampletype,
 				$record->date,
 				$record->lot,
-				$record->speciesname,
-				$record->storage,
+				$record->locus,
+				$record->species,
+				$record->location,
 				$record->box,
-				$record->companyname,
-				$record->firstname,
-				'<a href="polyclone/read/'.$record->cloneid.'" class="btn btn-link mr-1">Read</a>'
+				$record->company_name,
+				//'<a href="polyclone/read/'.$record->cloneid.'" class="btn btn-link mr-1">Read</a>'
                  );
           }
          }

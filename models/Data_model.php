@@ -7,7 +7,7 @@ class Data_model extends CI_Model
      function __construct() {
 		          
     }
-    var $order=array('id'=>'desc');
+    //var $order=array('id'=>'desc');
    /*
      * Fetch  data from the database
     */

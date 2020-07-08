@@ -44,7 +44,7 @@
         </a>
           </li>
           <li>
-            <a href="<?php echo site_url('databases/polyclone'); ?>">Clones
+            <a href="<?php echo site_url('databases/polyclone'); ?>">Polyclones
         </a>
           </li>
           <li>

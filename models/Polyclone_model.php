@@ -2,13 +2,7 @@
 
 class Polyclone_model extends CI_Model
 {
-     function __construct() {
-		 
-        $this->db2 = $this->load->database('db2', true);
-		$this->table = 'antibody';
-    }
-      
-    
+        
    /*
      * Fetch  data from the database
     */
@@ -18,12 +12,12 @@ class Polyclone_model extends CI_Model
 			if(isset($_POST["length"]) && $_POST["length"] != -1)
 			{
 				$this
-					->db2
+					->db
 					->limit($postData['length'], $postData['start']);
 			}
 		
         $query = $this
-            ->db2
+            ->db
             ->get();
         return $query->result();
     }
@@ -34,10 +28,10 @@ class Polyclone_model extends CI_Model
     public function countAll()
     {
         $this
-            ->db2
+            ->db
             ->from($this->table);
         return $this
-            ->db2
+            ->db
             ->count_all_results();
     }
 
@@ -48,7 +42,7 @@ class Polyclone_model extends CI_Model
     {
         $this->_get_datatables_query($postData);
         $query = $this
-            ->db2
+            ->db
             ->get();
         return $query->num_rows();
     }
@@ -58,13 +52,9 @@ class Polyclone_model extends CI_Model
     function get_by_id($id)
     {
 	$query = $this
-				->db2
-				->join('company','company.id=antibody.companyid','left')
-				->join('sampletype','sampletype.idsampletype=antibody.sampletypeid','left')
-				->join('antigen','antigen.id=antibody.antigenid','left')
-				->join('species','species.idspecies=antibody.speciesid','left')
-				->join('users','users.id=antibody.userid','left')
-				->where('cloneid', $id)
+				->db
+				->join('company','company_id=clones.companyid','left')
+				->where('clone_id', $id)
 				->get($this->table);
         return $query->row();  
     }
@@ -76,12 +66,8 @@ class Polyclone_model extends CI_Model
     {
 		
         $this
-            ->db2
-            ->join('company','company.id=antibody.companyid','left')
-            ->join('sampletype','sampletype.idsampletype=antibody.sampletypeid','left')
-            ->join('antigen','antigen.id=antibody.antigenid','left')
-			->join('species','species.idspecies=antibody.speciesid','left')
-			->join('users','users.id=antibody.userid','left')
+            ->db
+            ->join('company','company_id=clones.companyid','left')
             ->from($this->table);
 
         $i = 0;
@@ -92,22 +78,22 @@ class Polyclone_model extends CI_Model
                 if ($i === 0)
                 {
                     $this
-                        ->db2
+                        ->db
                         ->group_start();
                     $this
-                        ->db2
+                        ->db
                         ->like($item, $postData['search']['value']);
                 }
                 else
                 {
                     $this
-                        ->db2
+                        ->db
                         ->or_like($item, $postData['search']['value']);
                 }
                 if (count($this->column_search) - 1 == $i)
                 {
                     $this
-                        ->db2
+                        ->db
                         ->group_end();
                 }
             }
@@ -117,14 +103,14 @@ class Polyclone_model extends CI_Model
         if (isset($postData['order']))
         {
             $this
-                ->db2
+                ->db
                 ->order_by($this->column_order[$postData['order']['0']['column']], $postData['order']['0']['dir']);
         }
         else if (isset($this->order))
         {
             $order = $this->order;
             $this
-                ->db2
+                ->db
                 ->order_by(key($order) , $order[key($order) ]);
         }
     }
