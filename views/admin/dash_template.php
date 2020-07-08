@@ -41,7 +41,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo site_url('admin/alter/dashboard'); ?>">Admin Home</a></li>
+                      <li><a href="<?php echo site_url('admin/alter/'); ?>">Admin Home</a></li>
                       <li><a href="<?php echo site_url('home'); ?>">Main Home</a></li>
                      </ul>
                   </li>
@@ -57,6 +57,7 @@
 					  <li><a href="<?php echo site_url('admin/alter/rnaprep'); ?>">RnaPreps</a></li>
 					  <li><a href="<?php echo site_url('admin/alter/strain'); ?>">Strains</a></li>
 					 <li><a href="<?php echo site_url('admin/alter/vector'); ?>">Vectors</a></li>
+					 <li><a href="<?php echo site_url('admin/alter/company'); ?>">Company</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Users <span class="fa fa-chevron-down"></span></a>
@@ -108,9 +109,9 @@
 					<div class="">
 						<div class="page-title">
 							<div class="title_left">
-								<h3>
-									<small>You are in the administration page </small>
-								</h3>
+								<h4>
+									<small>Administrators page </small>
+								</h4>
 							</div>
 						</div>
 						<div class="clearfix"></div>

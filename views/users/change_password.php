@@ -1,7 +1,7 @@
 
 <div class="row justify-content-center">
-    <div class="col-6">
-        <h1><?php echo $title ?></h1>
+   <div class="col-sm-4">
+        <h2><?php echo $title ?></h2><br>
         <?php echo form_open('users/changePassword', array('id' => 'passwordForm'))?>
             <div class="form-group">
                 <input type="password" name="oldpass" id="oldpass" class="form-control" placeholder="Old Password" />
@@ -17,6 +17,7 @@
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-success">Change Password</button>
+                <a href="<?=site_url('home');?>" class="btn btn-warning">Back</a>
             </div>
         <?php echo form_close(); ?>
     </div>

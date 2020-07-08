@@ -138,6 +138,8 @@
         </li>
         <?php endif; ?>
       </ul>
+      
+      
       <ul class="nav navbar-nav navbar-right">
         <?php if(!$this->session->userdata('logged_in')): ?>
         <li>
@@ -145,10 +147,14 @@
     </a>
         </li>
         <?php endif; ?>
+        
         <?php if($this->session->userdata('logged_in')): ?>
-        <span class="navbar-text">Welcome 
-    <?php echo $this->session->userdata('firstname'); ?>
-  </span>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Welcome <?php echo $this->session->userdata('firstname'); ?><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<?php echo site_url('users/changePassword');?>">Change password</a></li>
+        </ul>
+         </li>
         <li>
           <a href="<?php echo site_url('users/logout');?>">Logout
     </a>

@@ -16,7 +16,6 @@ class Alter extends MY_Controller {
     function index()
     {
 		
-        //$this->template->load('admin/template', 'admin/dash');
         $this->template->load('admin/dash_template', 'admin/dash');
 
        
@@ -122,84 +121,27 @@ class Alter extends MY_Controller {
     
     function polyclone()
 	{
-		$this->db = $this->load->database('db2',true);
-		$crud=$this->_getGroceryCrude('antibody','Polyclone');
-		$crud->display_as('sampletypeid','Sample Type');
+		
+		$crud=$this->_getGroceryCrude('clones','Clones');
+		$crud->display_as('preparedby','Prepared by');
 		$crud->display_as('companyid','Company');
-		$crud->display_as('antigenid','Antigen');
-		$crud->display_as('speciesid','Species');
-		$crud->display_as('userid','User');
+		$crud->display_as('projectid','Project ID');
+		$crud->display_as('sampletype','Sample Type');
 		$crud->order_by('projectid','desc');
-		$crud->set_relation('sampletypeid','sampletype','category');
-		$crud->set_relation('companyid','company','companyname');
-		$crud->set_relation('antigenid','antigen','name');
-		$crud->set_relation('speciesid','species','speciesname');
-		$crud->set_relation('userid','users','firstname');
-		$crud->unset_columns('animalnum','purpose','sequence','comments','speciesnamedrop','volume','box','date');
-		$crud->unset_texteditor('comments','purpose','sequence');
+		$crud->set_relation('companyid','company','company_name');
 		$output = $crud->render();
 		$this->_table_output($output);
 	}
 	
-	public function antigen()
-    {
-         $this->db = $this->load->database('db2',true);
-         $crud=$this->_getGroceryCrude('antigen','Antigen');
-         $crud->unset_delete();
-         $crud->unset_texteditor('sequence');
-         $output = $crud->render();
-         $this->_table_output($output);                
-    }
-    
+	   
     public function company()
     {
-         $this->db = $this->load->database('db2',true);
          $crud=$this->_getGroceryCrude('company','Company');
          $crud->unset_clone();
          $crud->unset_delete();
          $output = $crud->render();
          $this->_table_output($output);                
     }
-	
-	public function sampletype()
-    {
-         $this->db = $this->load->database('db2',true);
-         $crud=$this->_getGroceryCrude('sampletype','Sample Type');
-         $crud->unset_delete();
-         $output = $crud->render();
-         $this->_table_output($output);                
-    }
-    
-    public function species()
-    {
-         $this->db = $this->load->database('db2',true);
-         $crud=$this->_getGroceryCrude('species','Species');
-         $crud->unset_delete();
-         $output = $crud->render();
-         $this->_table_output($output);                
-    }
-    
-   public function user()  //has errors when updating 
-	{
-		$crud = new grocery_CRUD();
-		$crud->set_table('lab_users');
-		$crud->set_subject('Users');
-		$crud->columns('firstname','lastname','email','level');
-		$crud->edit_fields('firstname','lastname','email','level');
-		$crud->unset_read()->unset_export()->unset_print()->unset_clone()->unset_add();
-		$crud->field_type('level','dropdown',
-            array('editor' => 'editor', 'admin' => 'admin','user' => 'user'));
-		$output = $crud->render();
-		$this->_table_output($output);
-	}	
-
-	function use_md5_password($post_array) 
-	{
-	    $this->load->helper('security');
-	    $post_array['password'] = do_hash($post_array['password'], 'md5');
-	    return $post_array;
-	} 
-	
 	
 	function _getGroceryCrude($tableName,$tableSubject)
 	{
