@@ -7,14 +7,20 @@
     <!-- meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--
+    <link rel="stylesheet" href="<?php //echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
+-->
     <!-- custom CSS -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css?v=1.1" type="text/css" title="Contemporary">
   </head>
-  <body>
+  
+ 
     <!-- Navigation -->
     <?php $this->load->view('common/navigation');?>
     <!--/.. Navigation -->
+   
+  <body>
     <!-- Container -->
     <div class="container">
       <!-- main data -->
@@ -34,11 +40,13 @@
       </div>
     </footer>
     <!-- JS Libs -->
-    <script src="<?php echo base_url('assets/js/jquery-3.5.0.js') ?>" >
-    </script>
-    <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js') ?>" >
-    </script>
-    <script src="<?php echo base_url('assets/js/photo-gallery.js') ?>" >
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+<!--
+    <script src="<?php //echo base_url('assets/js/jquery-3.5.0.js') ?>" ></script>
+    <script src="<?php //echo base_url('assets/bootstrap/js/bootstrap.min.js') ?>" ></script>
+-->
+    <script src="<?php echo base_url('assets/js/photo-gallery.js') ?>" ></script>
   </body>
 </html>

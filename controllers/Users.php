@@ -130,9 +130,10 @@ class Users extends CI_Controller{
         }else {
             $user_id = $this->input->post('user_id');
             $newpass = $this->input->post('newpass');
-            $this->users_model->update_user($id, array('password' => md5($newpass)));
+            $this->users_model->update_user($user_id, array('password' => md5($newpass)));
             $this->session->set_flashdata('message', 'Password has been updated.');
-            redirect(base_url('users/edit/'.$user_id));
+            //redirect('users/edit/'.$user_id);
+            redirect('users/editpass/'.$user_id);
         }
 	}	
     
@@ -186,7 +187,8 @@ class Users extends CI_Controller{
             $id = $this->session->userdata('id');
             $newpass = $this->input->post('newpass');
             $this->users_model->update_user($id, array('password' => md5($newpass)));
-            redirect('users/logout');
+            $this->session->set_flashdata('message', 'Your password has been updated.');
+            redirect('home');
         }
     }
 
@@ -209,7 +211,7 @@ class Users extends CI_Controller{
 		$user=$this->users_model->get_user_by_id($id);
 		$this->users_model->delete_user($id);
 		$this->session->set_flashdata('message', "User {$user->firstname} has been deleted");
-		redirect(base_url('users'));
+		redirect('users');
 		
 	}
   

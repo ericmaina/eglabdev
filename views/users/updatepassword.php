@@ -1,10 +1,20 @@
 <div class="row justify-content-center">
+<div class="col-sm-6">
+		<h4>Update password</h4>
+		<?php if($this->session->flashdata('message')) { ?>
+			<div class="alert alert-danger">
+				<?php echo $this->session->flashdata('message')?>
+			</div>
+		<?php } ?>
+	</div>
+</div>
+
+
+<div class="row justify-content-center">
     <div class="col-6">
         
         <?php echo form_open('users/updatePassword', array('id' => 'passwordForm'))?>
-        <div class="form-group">
-			 <input class="form-control" placeholder="User ID" name="user_id" type="hidden" value="<?= $user->user_id ?>">
-		</div>
+        
          <div class="form-group">
             <label for="Firstname" class="control-label">First Name:</label>
             <div class="form-control">
@@ -15,7 +25,9 @@
                 <p class="form-control-static"><?= $user->lastname ?></p>
             </div>
         </div>
-               
+              <div class="form-group">
+			 <input class="form-control"  name="user_id" type="hidden" value="<?= $user->user_id ?>">
+		</div> 
             <div class="form-group">
                 <input type="password" name="newpass" id="newpass" class="form-control" placeholder="New Password" />
                 <?php echo form_error('newpass', '<div class="error">', '</div>')?>

@@ -19,10 +19,10 @@
 		<script type="text/javascript"> var base_url = "<?php echo base_url(); ?>";</script>
 		
 					</head>
-					<body>
-						<!-- Navigation -->
+					<!-- Navigation -->
 						<?php $this->load->view('common/navigation');?>
 						<!--/.. Navigation -->
+					<body>
 						<!-- Container -->
 						<div class="container">
 							<!-- main data -->
