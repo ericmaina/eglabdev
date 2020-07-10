@@ -33,7 +33,7 @@ class Alter extends MY_Controller {
     function vector()
     {
 		$crud=$this->_getGroceryCrude('vectors','Vectors');
-        $crud->set_field_upload('vectormap','assets/uploads/');
+        $crud->set_field_upload('vectormap','assets/uploads/vector_maps');
         $crud->unset_columns('comments','reference','keywords','modified');
         $crud->required_fields('name','date','vector','markers');
         $crud->unset_texteditor('comments','reference','keywords');

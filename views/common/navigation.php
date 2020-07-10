@@ -55,16 +55,17 @@
 						<a href="<?php echo site_url('databases/strains'); ?>">Strains
 					</a>
 					  </li>
-					  <li>
-						<a href="<?php echo site_url('databases/vectors'); ?>">Vectors
-					</a>
-					  </li>
+					
 					  <li>
 						<a href="<?php echo site_url('databases/tfome'); ?>">Tfome
 					</a>
 					  </li>
 					  <li>
 						<a href="<?php echo site_url('databases/transcient'); ?>">Transcient
+					</a>
+					  </li>
+					    <li>
+						<a href="<?php echo site_url('databases/vectors'); ?>">Vectors
 					</a>
 					  </li>
 					  <li>

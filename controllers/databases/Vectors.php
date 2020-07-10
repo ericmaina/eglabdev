@@ -25,7 +25,7 @@ class Vectors extends MY_Controller
     
     function download($filename = NULL){
         $this->load->helper('download');
-		$data = file_get_contents(base_url('assets/uploads/'.$filename));
+		$data = file_get_contents(base_url('assets/uploads/vector_maps/'.$filename));
 		force_download($filename,$data);
 		 
 	}
@@ -81,12 +81,12 @@ class Vectors extends MY_Controller
                 $record->concentration,
                 $record->markers,
                 $record->vector,
-                $record->inserts,
+                //$record->inserts,
                 $record->size,
                 $record->box,
                 $record->keywords,
                 $record->comments,
-                $record->modified,
+                //$record->modified,
                 $image,
                 );
       }

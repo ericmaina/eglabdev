@@ -6,7 +6,7 @@ class Photo extends CI_Controller{
 		parent::__construct();
 		$this->load->model('pic_model');
 		$this->load->library('form_validation');
-
+        $this->uploadPath = 'assets/uploads/photos/'; 
 	}
 	
 	public function index(){
@@ -25,8 +25,7 @@ class Photo extends CI_Controller{
 	}
 	
 	public function upload_photo(){
-		//validate the form data 
-
+		
 		$this->form_validation->set_rules('title', 'Picture Title', 'required');
 
         if ($this->form_validation->run() == FALSE){
@@ -42,8 +41,8 @@ class Photo extends CI_Controller{
 
 			//file upload code 
 			//set file upload settings 
-			$config['upload_path']          = 'assets/uploads/';
-			$config['allowed_types']        = 'gif|jpg|png';
+			$config['upload_path']          = 'assets/uploads/photos';
+			$config['allowed_types']        = 'gif|jpg|png|jpeg';
 			$config['max_size']             = 3072;
 
 			$this->load->library('upload', $config);
@@ -70,12 +69,48 @@ class Photo extends CI_Controller{
 		}
 	}
 	
+	 public function delete($id)
+	 { 
+        $this->logged_in();
+        $this->admin_login();
+        // Check whether id is not empty 
+        if($id){ 
+                $imgData = $this->pic_model->get_single_pic($id); 
+             
+            // Delete gallery data 
+            $delete = $this->pic_model->delete($id); 
+             
+            if($delete){ 
+                // Remove file from the server  
+                if(!empty($imgData['url'])){ 
+                    @unlink($this->uploadPath.$imgData['url']);  
+                }  
+                 
+                $this->session->set_flashdata('message', 'Image has been removed successfully.'); 
+            }else{ 
+                $this->session->set_flashdata('error', 'Some problems occurred, please try again.'); 
+            } 
+        } 
+ 
+        redirect('gallery/photo'); 
+    } 
+	
+	
 	 private function logged_in()
     {
         if( ! $this->session->has_userdata('logged_in')){
             redirect('users/login');
         }
     }
+    
+    
+    private function admin_login()
+    {
+		if(!($this->session->userdata('userlevel')=='admin')){
+			$this->session->set_flashdata('message', 'Sorry! you need to be an administrator to access this page');
+			redirect('home');
+		}
+	}
     
 }
 
