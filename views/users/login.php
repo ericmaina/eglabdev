@@ -9,7 +9,7 @@
 	</div>
 </div>
 <div class="row justify-content-center">
-	
+	  <div class="col-sm-8">
 		<?php echo form_open('users/login', array('id' => 'loginForm','class'=>'form-horizontal')) ?>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="email">Email:</label>
@@ -32,7 +32,7 @@
 				</div>
 			</div>
 		<?php echo form_close(); ?>
-	
+	</div>
 </div>
 
 
