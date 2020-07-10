@@ -37,7 +37,7 @@
 								<div class="col-md-12 col-sm-12">
 									
 										© 2019 Copyright:
-									<a href="https://bmb.natsci.msu.edu/faculty/erich-grotewold/"> GrotewoldLab</a>
+									<a href="https://bmb.natsci.msu.edu/grotewold-lab/"> GrotewoldLab</a>
 								</div>
 							</div>
 						 </div>
