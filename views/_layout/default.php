@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php //echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
 -->
     <!-- custom CSS -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css?v=1.1" type="text/css" title="Contemporary">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css?v=1.2" type="text/css" title="Contemporary">
   </head>
   
  
