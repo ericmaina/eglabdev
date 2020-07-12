@@ -32,9 +32,12 @@
 				</div>
 			</div>
 		<?php echo form_close(); ?>
+		
 	</div>
 </div>
 
-
-   
-
+<div class="center">
+	  <div class="col-sm-offset-2 col-sm-6">
+		 <p class="small center"> Need access ? contact the lab manager </p>
+	</div>
+</div>

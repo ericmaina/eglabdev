@@ -7,6 +7,7 @@ class Photo extends CI_Controller{
 		$this->load->model('pic_model');
 		$this->load->library('form_validation');
         $this->uploadPath = 'assets/uploads/photos/'; 
+        $this->output->enable_profiler(TRUE);
 	}
 	
 	public function index(){
@@ -95,7 +96,8 @@ class Photo extends CI_Controller{
         redirect('gallery/photo'); 
     } 
 	
-	
+
+
 	 private function logged_in()
     {
         if( ! $this->session->has_userdata('logged_in')){
@@ -111,6 +113,8 @@ class Photo extends CI_Controller{
 			redirect('home');
 		}
 	}
+	
+	
     
 }
 

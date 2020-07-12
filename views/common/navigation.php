@@ -106,7 +106,7 @@
           <a href="<?php echo site_url('gallery/photo'); ?>">Photo gallery
             </a>
         </li>
-        <li><a href="#">Resources</a></li>
+        <li><a href="<?php echo site_url('plasmidmaps'); ?>">Plasmid Maps</a></li>
         </ul>
         
        <?php if($this->session->userdata('logged_in') and $this->session->userdata('userlevel')==='admin'): ?>

@@ -14,5 +14,7 @@ class Home extends CI_Controller
 	    $this->template->set('title', 'Home page');
         $this->template->load('_layout/default', 'home');
     }
+    
+    
        
 }
