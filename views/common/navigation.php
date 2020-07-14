@@ -1,6 +1,6 @@
 <!-- Container -->
 <div class="container">
-<nav class="navbar navbar-default navbar-inverse">
+<nav class="navbar navbar-default navbar">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
@@ -8,7 +8,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button> 
-		 <a class="navbar-brand" href="#">EGLAB Database</a>
+		 <a class="navbar-brand" href="#">DEVELOPMENT SITE</a>
 		</div>
 		
      <div class="collapse navbar-collapse" id="navbarCollapse">	
