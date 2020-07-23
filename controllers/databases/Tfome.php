@@ -7,7 +7,7 @@ class Tfome extends MY_Controller
        
         parent::__construct();
         $this->load->model('Tfome_model');
-        $this->column_search = array('gene_model','gene_name','label', 'ut_number','first_name');
+        $this->column_search = array('gene_model','gene_name','label', 'ut_number','vector');
 		$this->column_order = array('tfome_id','gene_model','gene_name','ut_number','vector',null,'label', null,null,'first_name',null);
         $this->order = array('tfome_id' => 'Asc');
         
@@ -15,9 +15,9 @@ class Tfome extends MY_Controller
 
     public function index()
     {
-	    
+	    $data['tablename']='tfome';
         $this->template->set('title', 'Tfome Records');
-        $this->template->load('_layout/database', 'databases/tfome');
+        $this->template->load('_layout/database', 'databases/tfome',$data);
 	    
     } 
     

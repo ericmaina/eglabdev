@@ -1,7 +1,7 @@
 <h3>RNA Records</h3>
 <br>
 <div class="table-responsive">
-<table class="table table-bordered table-striped table-condensed table-responsive" id="rnaprep-list">
+<table class="table table-bordered table-striped table-condensed table-responsive" id="stock-list">
 	<thead>
 		<tr>
 			<th>Plant Source</th>

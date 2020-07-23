@@ -15,9 +15,9 @@ class Inventory extends MY_Controller
 
     public function index()
     {
-	    
+	    $data['tablename']='inventory';
         $this->template->set('title', 'Inventory Records');
-        $this->template->load('_layout/database', 'databases/inventory');
+        $this->template->load('_layout/database', 'databases/inventory',$data);
 	    
     } 
     

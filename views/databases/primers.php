@@ -1,7 +1,7 @@
 <h3>Primer Records</h3>
 <br>
 <div class="table-responsive">
-<table class="table table-bordered table-striped table-condensed" id="primer-list">
+<table class="table table-bordered table-striped table-condensed" id="stock-list">
 	<thead>
 		<tr>
 

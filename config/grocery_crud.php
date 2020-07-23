@@ -31,7 +31,7 @@
     // Default theme for grocery CRUD
     //,
     //other themes
-    //tablestrap,datatables
+    //tablestrap,datatables,flexigrid
     $config['grocery_crud_default_theme'] = 'flexigrid';
 
     // The environment is important so we can have specific configurations for specific environments

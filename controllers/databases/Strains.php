@@ -16,9 +16,9 @@ class Strains extends MY_Controller
 
     public function index()
     {
-        
+        $data['tablename']='strains';
         $this->template->set('title', 'Strains Records');
-        $this->template->load('_layout/database', 'databases/strains');
+        $this->template->load('_layout/database', 'databases/strains',$data);
     } 
     
     

@@ -17,8 +17,9 @@ class Antibodies extends MY_Controller
 
     public function index()
     {
+        $data['tablename']='antibodies';
         $this->template->set('title', 'Antibodies Records');
-        $this->template->load('_layout/database', 'databases/antibodies');
+        $this->template->load('_layout/database', 'databases/antibodies',$data);
 	    
     } 
     

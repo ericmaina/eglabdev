@@ -1,7 +1,7 @@
 <h3>Inventory Records</h3>
 <br>
 <div class="table-responsive">
-<table class="table table-bordered table-striped table-condensed " id="inventory-list">
+<table class="table table-bordered table-striped table-condensed " id="stock-list">
 	<thead>
 		<tr>
 			<th>Item Name</th>

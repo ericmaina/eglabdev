@@ -1,7 +1,7 @@
 <h3>Strain Records</h3>
 <br>
 <div class="table-responsive">
-<table class="table table-bordered table-striped table-condensed " id="strain-list">
+<table class="table table-bordered table-striped table-condensed " id="stock-list">
 	<thead>
 		<tr>
 			<th>Species</th>

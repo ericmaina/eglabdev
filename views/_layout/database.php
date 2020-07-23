@@ -15,8 +15,7 @@
 		<!-- custom CSS -->
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css?v=1.2" type="text/css" title="Contemporary">
 		
-		<!-- js -->
-		<script type="text/javascript"> var base_url = "<?php echo base_url(); ?>";</script>
+		
 		
 					</head>
 					<!-- Navigation -->
@@ -28,6 +27,7 @@
 							<!-- main data -->
 							<div class="main data">
 								<?= $contents ?>
+								
 							</div>
 							<!--/.. main data-->
 						</div>
@@ -42,13 +42,32 @@
 							</div>
 						 </div>
 						 <!-- JS Libs -->
-
+						 <script type="text/javascript">
+					     table ="<?php echo $tablename; ?>";
+						 base_url = "<?php echo base_url(); ?>";
+						 
+						 </script>
 						 <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
 						 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 						 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 						 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js" ></script>
 						 <script src="<?php echo base_url("assets/js/ColReorderWithResize.js") ?>" ></script>
-						 <script src="<?php echo base_url("assets/js/database.js") ?>"></script>
+<!--
+						 <script src="<?php //echo base_url("assets/js/database.js") ?>"></script>
+-->
 				</body>
 </html>
-				
+ <script type="text/javascript"> 				
+$(document).ready(function() {
+	table ="<?php echo $tablename ?>"
+    $('#stock-list').DataTable({
+        "serverSide": true,
+        //"dom": 'Rlfrtip',
+        "order": [0, 'desc'],
+        "ajax": {
+            url: base_url + 'databases/'+table+'/getLists',
+            type: 'post'
+        }
+    });
+ });
+ </script>

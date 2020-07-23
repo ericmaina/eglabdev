@@ -16,9 +16,9 @@ class Vectors extends MY_Controller
 
     public function index()
     {
-        
+        $data['tablename']='vectors';
         $this->template->set('title', 'Vector Records');
-        $this->template->load('_layout/database', 'databases/vectors');
+        $this->template->load('_layout/database', 'databases/vectors',$data);
     } 
     
     

@@ -43,10 +43,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-<!--
-    <script src="<?php //echo base_url('assets/js/jquery-3.5.0.js') ?>" ></script>
-    <script src="<?php //echo base_url('assets/bootstrap/js/bootstrap.min.js') ?>" ></script>
--->
+	<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js" ></script>
+
     <script src="<?php echo base_url('assets/js/photo-gallery.js') ?>" ></script>
   </body>
 </html>

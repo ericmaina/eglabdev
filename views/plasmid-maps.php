@@ -1,8 +1,8 @@
 <div class="table-responsive">
-	<table class="table table-condensed w-auto">
+	<table class="table table-bordered table-condensed">
 		<thead>
 			<tr>
-				<th style="width:40%">Plasmid</th>
+				<th>Plasmid</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -13,7 +13,6 @@
 				 <td><?php echo anchor('plasmidmaps/download/'.$filename,'Download','class="btn-sm btn-success"');?></td> 
 			</tr>
 			<?php endforeach;?>
-
 		</tbody>
 	 </table>    
 </div>

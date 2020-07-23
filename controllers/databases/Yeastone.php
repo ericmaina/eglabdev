@@ -15,9 +15,9 @@ class Yeastone extends MY_Controller
 
     public function index()
     {
-	    
+	    $data['tablename']='yeastone';
         $this->template->set('title', 'Yeast One Hybrid Records');
-        $this->template->load('_layout/database', 'databases/yeastone');
+        $this->template->load('_layout/database', 'databases/yeastone',$data);
 	    
     } 
     

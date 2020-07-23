@@ -15,9 +15,9 @@ class Primers extends MY_Controller
 
     public function index()
     {
-	    
+	    $data['tablename']='primers';
         $this->template->set('title', 'Primer Records');
-        $this->template->load('_layout/database', 'databases/primers');
+        $this->template->load('_layout/database', 'databases/primers',$data);
     } 
   
     public function read($id) 

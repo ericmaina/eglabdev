@@ -1,6 +1,6 @@
 <h3>Yeast One Hybrid Records</h3>
 <div class="table-responsive">
-<table class="table table-bordered table-striped table-condensed" id="yeastone-list">
+<table class="table table-bordered table-striped table-condensed" id="stock-list">
 	<thead>
 		<tr>
 				

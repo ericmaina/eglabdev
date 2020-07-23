@@ -18,9 +18,9 @@ class Plasmid extends MY_Controller
 
     public function index()
     {
-    
+        $data['tablename']='plasmid';
 	    $this->template->set('title', 'Plasmid Records');
-        $this->template->load('_layout/database', 'databases/plasmid');
+        $this->template->load('_layout/database', 'databases/plasmid',$data);
 	    
     } 
 

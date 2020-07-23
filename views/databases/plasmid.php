@@ -1,7 +1,7 @@
 <h3>Plasmid Records</h3>
 <br>
 <div class="table-responsive">
-<table class="table table-bordered table-striped table-condensed " id="plasmid-list">
+<table class="table table-bordered table-striped table-condensed " id="stock-list">
 	<thead>
 		<tr>
 			<th>Name</th>

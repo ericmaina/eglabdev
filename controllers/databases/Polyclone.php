@@ -18,9 +18,9 @@ class Polyclone extends MY_Controller
 
     public function index()
     {
-	    
+	    $data['tablename']='polyclone';
         $this->template->set('title', 'Polyclonal Records');
-        $this->template->load('_layout/database', 'databases/polyclones');
+        $this->template->load('_layout/database', 'databases/polyclones',$data);
 	    
     } 
     

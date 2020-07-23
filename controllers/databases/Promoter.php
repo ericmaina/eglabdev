@@ -16,9 +16,9 @@ class Promoter extends MY_Controller
 
     public function index()
     {
-	    
+	    $data['tablename']='promoter';
         $this->template->set('title', 'Promoter Records');
-        $this->template->load('_layout/database', 'databases/promoter');
+        $this->template->load('_layout/database', 'databases/promoter',$data);
 	    
     } 
     

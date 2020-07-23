@@ -106,6 +106,12 @@
           <a href="<?php echo site_url('gallery/photo'); ?>">Photo gallery
             </a>
         </li>
+         
+         <li>
+          <a href="<?php echo site_url('awsglacier'); ?>">Glacier
+            </a>
+        </li>
+        
         <li><a href="<?php echo site_url('plasmidmaps'); ?>">Plasmid Maps</a></li>
         </ul>
         

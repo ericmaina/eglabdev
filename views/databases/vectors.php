@@ -1,7 +1,7 @@
 <h3>Vector Records</h3>
 <br>
 <div class="table-responsive">
-<table class="table table-bordered table-striped table-condensed" id="vector-list">
+<table class="table table-bordered table-striped table-condensed" id="stock-list">
 	<thead>
 		<tr>
 			<th class="col-sm-2">Name</th>
@@ -13,8 +13,8 @@
 		    <th class="col-sm-1">Box</th>
 		    <th class="col-sm-1">Keywords</th>
 		    <th class="col-sm-2">Comments</th>
-		    <th class="col-sm-1">Vectormap</th>
-
+		    <th class="col-sm-1">Vector Maps</th>
+            
 		</tr>
 	</thead>
 	

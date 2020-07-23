@@ -16,9 +16,9 @@ class Mutants extends MY_Controller
 
     public function index()
     {
-    
+		$data['tablename']='mutants';
         $this->template->set('title', 'Mutant Records');
-        $this->template->load('_layout/database', 'databases/mutants');
+        $this->template->load('_layout/database', 'databases/mutants',$data);
     } 
 
     public function read($id) 

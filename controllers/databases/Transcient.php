@@ -15,9 +15,9 @@ class Transcient extends MY_Controller
 
     public function index()
     {
-	    
+	    $data['tablename']='transcient';
         $this->template->set('title', 'Transcient Records');
-        $this->template->load('_layout/database', 'databases/transcient');
+        $this->template->load('_layout/database', 'databases/transcient',$data);
 	    
     } 
     

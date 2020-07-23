@@ -16,9 +16,9 @@ class Rnapreps extends MY_Controller
 
     public function index()
     {
-                     
+        $data['tablename']='rnapreps';             
         $this->template->set('title', 'Rnapreps Records');
-        $this->template->load('_layout/database', 'databases/rnapreps');
+        $this->template->load('_layout/database', 'databases/rnapreps',$data);
     } 
    
 

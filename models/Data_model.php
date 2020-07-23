@@ -7,7 +7,6 @@ class Data_model extends CI_Model
      function __construct() {
 		          
     }
-    //var $order=array('id'=>'desc');
    /*
      * Fetch  data from the database
     */
@@ -121,5 +120,5 @@ class Data_model extends CI_Model
 
 }
 
-/* End of file Inventory_model.php */
-/* Location: ./application/models/Inventory_model.php */
+/* End of file Data_model.php */
+/* Location: ./application/models/Data_model.php */
