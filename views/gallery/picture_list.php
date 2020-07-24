@@ -36,7 +36,7 @@
             
 				<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4 img">
 					
-					<img class="img-responsive" src="<?=base_url().'assets/uploads/photos/'.$pic->url;?>" title="<?php echo $pic->title;?>">
+					<img class="img-responsive" src="<?=base_url().'uploads/photos/'.$pic->url;?>" title="<?php echo $pic->title;?>">
 					<div class="caption">
                       <p><?php echo $pic->title;?></p>
                      </div>

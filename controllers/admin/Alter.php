@@ -33,7 +33,7 @@ class Alter extends MY_Controller {
     function glacier()
     {
 		$crud=$this->_getGroceryCrude('awsglacier','Archive');
-        $crud->set_field_upload('local_metadata','assets/uploads/metada_files');
+        $crud->set_field_upload('local_metadata','uploads/metada_files');
         $crud->unset_columns('archive_id','archive_description','tissue','species','archived_metadata');
         $output = $crud->render();
 		$this->_table_output($output);        
@@ -46,7 +46,7 @@ class Alter extends MY_Controller {
     function vector()
     {
 		$crud=$this->_getGroceryCrude('vectors','Vectors');
-        $crud->set_field_upload('vectormap','assets/uploads/vector_maps');
+        $crud->set_field_upload('vectormap','uploads/vector_maps');
         $crud->unset_columns('comments','reference','keywords','modified');
         $crud->required_fields('name','date','vector','markers');
         $crud->unset_texteditor('comments','reference','keywords');

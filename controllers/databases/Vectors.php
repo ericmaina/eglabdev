@@ -25,7 +25,7 @@ class Vectors extends MY_Controller
     
     function download($filename = NULL){
         $this->load->helper('download');
-		$data = file_get_contents(base_url('assets/uploads/vector_maps/'.$filename));
+		$data = file_get_contents(base_url('uploads/vector_maps/'.$filename));
 		force_download($filename,$data);
 		 
 	}

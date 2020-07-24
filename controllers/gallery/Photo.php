@@ -6,7 +6,7 @@ class Photo extends CI_Controller{
 		parent::__construct();
 		$this->load->model('pic_model');
 		$this->load->library('form_validation');
-        $this->uploadPath = 'assets/uploads/photos/'; 
+        $this->uploadPath = 'uploads/photos/'; 
         $this->output->enable_profiler(TRUE);
 	}
 	
@@ -42,7 +42,7 @@ class Photo extends CI_Controller{
 
 			//file upload code 
 			//set file upload settings 
-			$config['upload_path']          = 'assets/uploads/photos';
+			$config['upload_path']          = 'uploads/photos';
 			$config['allowed_types']        = 'gif|jpg|png|jpeg';
 			$config['max_size']             = 3072;
 

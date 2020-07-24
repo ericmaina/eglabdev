@@ -22,7 +22,7 @@ class Awsglacier extends MY_Controller
     
     function download($filename = NULL){
         $this->load->helper('download');
-		$data = file_get_contents(base_url('assets/uploads/metada_files/'.$filename));
+		$data = file_get_contents(base_url('uploads/metada_files/'.$filename));
 		force_download($filename,$data);
 		 
 	}
