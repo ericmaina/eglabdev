@@ -7,7 +7,6 @@ class Photo extends CI_Controller{
 		$this->load->model('pic_model');
 		$this->load->library('form_validation');
         $this->uploadPath = 'uploads/photos/'; 
-        $this->output->enable_profiler(TRUE);
 	}
 	
 	public function index(){
