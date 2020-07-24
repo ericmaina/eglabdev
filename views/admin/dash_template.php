@@ -58,6 +58,10 @@
 					  <li><a href="<?php echo site_url('admin/alter/strain'); ?>">Strains</a></li>
 					 <li><a href="<?php echo site_url('admin/alter/vector'); ?>">Vectors</a></li>
 					 <li><a href="<?php echo site_url('admin/alter/company'); ?>">Company</a></li>
+<!--
+					 <li><a href="<?php //echo site_url('admin/alter/glacier'); ?>">Archive</a></li>
+-->
+
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Users <span class="fa fa-chevron-down"></span></a>

@@ -107,13 +107,20 @@
             </a>
         </li>
          
-         <li>
-          <a href="<?php echo site_url('awsglacier'); ?>">Glacier
-            </a>
-        </li>
-        
-        <li><a href="<?php echo site_url('plasmidmaps'); ?>">Plasmid Maps</a></li>
-        </ul>
+         <li class="dropdown">
+			  <a class="dropdown-toggle" data-toggle="dropdown"href="#">Resources
+			  <span class="caret"></span></a>
+			  <ul class="dropdown-menu">
+				 <li>
+					 <a href="<?php echo site_url('awsglacier'); ?>">Raw Data Records</a>
+
+					</li>
+					
+					<li>
+					  <a href="<?php echo site_url('plasmidmaps'); ?>">Plasmid Maps</a>
+					</li>
+				</ul>
+         </li>
         
        <?php if($this->session->userdata('logged_in') and $this->session->userdata('userlevel')==='admin'): ?>
 			<ul class="nav navbar-nav">	

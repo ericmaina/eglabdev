@@ -63,7 +63,7 @@ $(document).ready(function() {
     $('#stock-list').DataTable({
         "serverSide": true,
         //"dom": 'Rlfrtip',
-        "order": [0, 'desc'],
+        //"order": [0, 'desc'],
         "ajax": {
             url: base_url + 'databases/'+table+'/getLists',
             type: 'post'

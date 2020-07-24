@@ -16,45 +16,43 @@ class Awsglacier extends MY_Controller
         { 
         $archive_files = $this->Glacier_model->get_all();
         $data['archiverecord'] =$archive_files;
-			
-        //$this->template->set('title', 'Glacier Records');
-        //$this->template->load('_layout/default', 'glacier',$data);
-        $this->load->view('glacier',$data); 
+        $this->template->set('title', 'Glacier Records');
+        $this->template->load('_layout/default', 'awsbackup/glacier',$data);
         } 
     
-    
+    function download($filename = NULL){
+        $this->load->helper('download');
+		$data = file_get_contents(base_url('assets/uploads/metada_files/'.$filename));
+		force_download($filename,$data);
+		 
+	}
 	
     
     
- //public function read($id) 
-    //{
-        //$row = $this->Tfome_model->get_by_id($id);
-        //if ($row) {
-            //$data = array(
-		//'genemodel' -> $row->gene_model,
-		//'genename' -> $row->gene_name,
-		//'utname' -> $row->ut_number,
-		//'vector' -> $row->vector,
-		//'genetictype' -> $row->material_type,
-		//'antibiotic'->$row->drug,
-		//'bacteria' -> $row->bacteria,
-		//'building' -> $row->building,
-		//'freezer' -> $row->freezer,
-		//'shelf'->$row->shelf,
-		//'plate'->$row->plate,
-		//'rack'->$row->rack,
-		//'position'->$row->position,
-		//'label'->$row->label,
-		//'creator' -> $row->first_name,
-	    //);
+ public function read($id) 
+    {
+        $row = $this->Glacier_model->get_by_id($id);
+        if ($row) {
+            $data = array(
+		'title' => $row->title,
+		'species' => $row->species,
+		'technique' => $row->technique,
+		'vault' => $row->archive_vault,
+		'tissue' => $row->tissue,
+		'metadatafile'=> $row->local_metadata,
+		'archiveDescription'=>$row->archive_description,
+		'archiveID' => $row->archive_id,
+		'archiveMetadata' => $row->archived_metadata,
+		
+	    );
           
-            //$this->template->set('title', 'Tfome details');
-			//$this->template->load('_layout/database', 'databases/tfome_read',$data);
-        //} else {
-            //$this->session->set_flashdata('message', 'Record Not Found');
-            //redirect(site_url('databases/tfome'));
-        //}
-    //}
+            $this->template->set('title', 'Archive details');
+			$this->template->load('_layout/default', 'awsbackup/glacier_read',$data);
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect(site_url('awsglacier'));
+        }
+    }
     
     
 

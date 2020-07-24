@@ -30,6 +30,19 @@ class Alter extends MY_Controller {
 		$this->_table_output($output);        
     }
     
+    function glacier()
+    {
+		$crud=$this->_getGroceryCrude('awsglacier','Archive');
+        $crud->set_field_upload('local_metadata','assets/uploads/metada_files');
+        $crud->unset_columns('archive_id','archive_description','tissue','species','archived_metadata');
+        $output = $crud->render();
+		$this->_table_output($output);        
+          
+    }
+    
+    
+    
+    
     function vector()
     {
 		$crud=$this->_getGroceryCrude('vectors','Vectors');
